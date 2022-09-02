@@ -9,7 +9,7 @@ scene.background = new THREE.Color(0x2f4751)
 scene.fog = new THREE.Fog(0x2f4751, 10, 50)
 
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000)
-camera.position.set(7, 3, 7)
+camera.position.set(0, 0, 10)
 
 const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#bg'), antialias: true })
 renderer.setPixelRatio(window.devicePixelRatio)
@@ -56,11 +56,11 @@ scene.add(mesh)
 
 const gltfLoader = new GLTFLoader()
 let weapon
-gltfLoader.load('./assets/weapon/asagao_hanae/scene.gltf', gltf => {
+gltfLoader.load('./assets/weapon/kagami_chihiro/scene.gltf', gltf => {
 	weapon = gltf.scene
     weapon.rotation.set(Math.PI, 0, Math.PI / 2)
     weapon.scale.set(7, 7, 7)
-    weapon.position.set(0, -1, 0)
+    weapon.position.set(0, -0.5, 0)
     weapon.castShadow = true
     weapon.recieveShadow = true
     scene.add(weapon)
@@ -86,6 +86,7 @@ const animate = () => {
     requestAnimationFrame(animate)
 
     weapon.rotation.y += 0.005
+    camera.position.x = - (mouseX / window.innerWidth * 0.4 - 0.3)
 
     renderer.render(scene, camera)
 }
