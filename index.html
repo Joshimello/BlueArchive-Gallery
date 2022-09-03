@@ -2,38 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blue Archive</title>
+    <link rel="icon" href="assets/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/js.cookie.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/GLTFLoader.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/gsap.min.js"></script>
 </head>
 
-<body>
-    
+<body>    
     <canvas id="bg"></canvas>
     <main id="app">
-        <div class="left">
-            <div class="title">
-                <span class="title-1">Kagami Chihiro</span>
-                <span class="title-2">各務チヒロ</span>
-                <div class="info">
-                    <!--
-                    <img src="https://rerollcdn.com/BlueArchive/Schools/White/Gehenna.png">
-                    <img src="https://rerollcdn.com/BlueArchive/Icons/Role-Attacker.png">
-                    <span class="fontl-2">Explosion Light Armor</span>-->
-                </div>
-            </div>
-            <div class="portrait">
-                <img src="https://static.wikia.nocookie.net/blue-archive/images/3/33/Chihiro_Portrait.png">
-            </div>
+        <div class="menu">
+            <span id="menu-back" onclick="navBack()">&LeftAngleBracket;</span>
+            <span class="menu-text">Millennium</span>
+            <span id="menu-next" onclick="navNext()">&RightAngleBracket;</span>
         </div>
         
-        <div class="right">
-            <div class="stats">
-                <span class="fontr-1">stats</span><br>
-            </div>
-        </div>
+
+
+
+
+
+
+
+
+
     </main>
-    <script type="module" src="js/main.js"></script>
+    <script src="js/threesetup.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 
 </html>

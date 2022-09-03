@@ -18,6 +18,10 @@ body {
 }
 
 canvas {
+    background-image: linear-gradient(150deg, #69b0f0, #a297f4, #60bbdf, #5cd1af);
+    background-size: 400% 400%;
+    background-position: 0% 100%;
+    transition: background-position 2s ease;
     position: fixed;
     top: 0;
     left: 0;
