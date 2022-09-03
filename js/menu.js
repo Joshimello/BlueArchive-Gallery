@@ -18,7 +18,7 @@ const loadIcon = name => {
     })
 }
 
-loadIcon('millennium')
+loadIcon('gehenna')
 const navNext = () => {
     TweenMax.to(icon.scale, 1, {x: 0, y: 0, z: 0})
     TweenMax.to(icon.children[2].material, 1, {opacity: 0, onComplete: loadIcon, onCompleteParams: ['abydos']})
