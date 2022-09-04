@@ -14,15 +14,23 @@
     <script src="js/GLTFLoader.js"></script>
     <script src="js/OrbitControls.js"></script>
     <script src="js/gsap.min.js"></script>
+    <script src="js/granim.min.js"></script>
 </head>
 
-<body>    
+<body>
+    <canvas id="gradient"></canvas>
     <canvas id="bg"></canvas>
     <main id="app">
         <div class="menu">
-            <span id="menu-back" onclick="navBack()">&LeftAngleBracket;</span>
-            <span class="menu-text">Millennium</span>
-            <span id="menu-next" onclick="navNext()">&RightAngleBracket;</span>
+            <button id="menu-back" onclick="navBack()">
+                <span>&LeftAngleBracket;</span>
+            </button>
+            
+            <span class="menu-text"></span>
+            
+            <button id="menu-next" onclick="navNext()">
+                <span>&RightAngleBracket;</span>
+            </button>
         </div>
         
 

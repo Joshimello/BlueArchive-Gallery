@@ -1,28 +1,42 @@
+#gradient {
+	height: 100vh;
+	width: 100vw;
+}
+
 .menu {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .menu-text {
-	font-size: 5rem;
-	font-family: teko-l;
-	color: white;
-	letter-spacing: .5rem;
-	text-transform: uppercase;
-	padding-bottom: 1.5rem;
-	opacity: 1;
-	transition: opacity 0.5s ease;
-	text-shadow: 2px 1px 3px rgba(0,0,0,0.5);
+    font-size: 5rem;
+    font-family: teko-l;
+    color: white;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 
 }
 
-#menu-next, #menu-back {
-	font-size: 3rem;
-	color: white;
-	letter-spacing: .5rem;
-	margin-bottom: 2.5rem;
-	padding: 2.5rem;
-	cursor: pointer;
+#menu-next,
+#menu-back {
+    height: 100%;
+    font-size: 3rem;
+    color: white;
+    letter-spacing: .5rem;
+    padding: 2.5rem 1.5rem 5rem 2.5rem;
+    cursor: pointer;
+    transition: background 0.1s ease;
+    background: none;
+    border: none;
+}
+
+#menu-next:hover,
+#menu-back:hover {
+    background: #ffffff30;
 }
