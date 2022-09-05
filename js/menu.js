@@ -86,7 +86,7 @@ var currentIcon = 0
 // function to manage buttons
 const checkBtn = () => {
     if (currentIcon == 0) {
-        $('#menu-back').prop("disabled", true)
+        $('#menu-back').prop('disabled', true)
         $('#menu-back').css({ opacity: 0 })
     } else {
         $('#menu-back').removeAttr('disabled')
@@ -94,7 +94,7 @@ const checkBtn = () => {
     }
 
     if (currentIcon == icons.length - 1) {
-        $('#menu-next').prop("disabled", true)
+        $('#menu-next').prop('disabled', true)
         $('#menu-next').css({ opacity: 0 })
     } else {
         $('#menu-next').removeAttr('disabled')
@@ -123,15 +123,15 @@ const loadIcon = name => {
 
 // initial run
 loadIcon(icons[currentIcon])
-$('.menu-text').text(icons[currentIcon])
+$('#menu-text').text(icons[currentIcon])
 checkBtn()
 
 // menu next btn onclick
 const navNext = () => {
     currentIcon += 1
 
-    $('#menu-next').prop("disabled", true)
-    $('.menu-text').css({ opacity: 0 })
+    $('#menu-next').prop('disabled', true)
+    $('#menu-text').css({ opacity: 0 })
 
     TweenMax.to(icon.scale, 1, { x: 0, y: 0, z: 0 })
     TweenMax.to(icon.children[2].material, 1, { opacity: 0, onComplete: loadIcon, onCompleteParams: [icons[currentIcon]] })
@@ -139,8 +139,8 @@ const navNext = () => {
     granimInstance.changeState(icons[currentIcon])
 
     setTimeout(() => {
-        $('.menu-text').text(icons[currentIcon])
-        $('.menu-text').css({ opacity: 1 })
+        $('#menu-text').text(icons[currentIcon])
+        $('#menu-text').css({ opacity: 1 })
         
         checkBtn()
     }, 1500)
@@ -150,8 +150,8 @@ const navNext = () => {
 const navBack = () => {
     currentIcon -= 1
 
-    $('#menu-back').prop("disabled", true)
-    $('.menu-text').css({ opacity: 0 })
+    $('#menu-back').prop('disabled', true)
+    $('#menu-text').css({ opacity: 0 })
 
     TweenMax.to(icon.scale, 1, { x: 0, y: 0, z: 0 })
     TweenMax.to(icon.children[2].material, 1, { opacity: 0, onComplete: loadIcon, onCompleteParams: [icons[currentIcon]] })
@@ -159,8 +159,8 @@ const navBack = () => {
     granimInstance.changeState(icons[currentIcon])
 
     setTimeout(() => {
-        $('.menu-text').text(icons[currentIcon])
-        $('.menu-text').css({ opacity: 1 })
+        $('#menu-text').text(icons[currentIcon])
+        $('#menu-text').css({ opacity: 1 })
         checkBtn()
     }, 1500)
 }
@@ -169,6 +169,18 @@ const navBack = () => {
 const animateIcon = () => {
     if (icon) {
         icon.rotation.x = (mouseY / window.innerHeight) * Math.PI * 0.1 + Math.PI * 0.45
-        icon.rotation.z = Math.PI / 2 - (mouseX / window.innerWidth) * Math.PI * 0.1 - Math.PI * 0.45
+        icon.rotation.z = Math.PI / 2 - (mouseX / window.innerWidth) * Math.PI * 0.2 - Math.PI * 0.4
     }
+}
+
+// enter section
+const navEnter = () => {
+    $('#menu-text').prop('disabled', true)
+    $('#menu-text').css({ opacity: 0 })
+    setTimeout(() => {
+        $('#menu-text').css({ display: 'none' })
+    }, 500)
+
+
+
 }

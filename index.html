@@ -21,16 +21,37 @@
     <canvas id="gradient"></canvas>
     <canvas id="bg"></canvas>
     <main id="app">
+        <button id="menu-back" onclick="navBack()">&LeftAngleBracket;</button>
+        <button id="menu-next" onclick="navNext()">&RightAngleBracket;</button>
         <div class="menu">
-            <button id="menu-back" onclick="navBack()">
-                <span>&LeftAngleBracket;</span>
-            </button>
-            
-            <span class="menu-text"></span>
-            
-            <button id="menu-next" onclick="navNext()">
-                <span>&RightAngleBracket;</span>
-            </button>
+            <button id="menu-text" onclick="navEnter()"></button>
+
+            <div class="menu-portrait">
+                <img src="./assets/student_portrait/Hoshino_Portrait.png">
+            </div>
+
+            <div class="menu-row">
+                <div class="menu-student">
+                    <span class="name">Shiroko</span>
+                    <img class="icon" src="./assets/student_icon/Shiroko_Icon.png">
+                </div>            
+                <div class="menu-student">
+                    <span class="name">Serika</span>
+                    <img class="icon" src="./assets/student_icon/Serika_Icon.png">
+                </div>
+                <div class="menu-student">
+                    <span class="name">Hoshino</span>
+                    <img class="icon" src="./assets/student_icon/Hoshino_Icon.png">
+                </div>
+                <div class="menu-student">
+                    <span class="name">Nonomi</span>
+                    <img class="icon" src="./assets/student_icon/Nonomi_Icon.png">
+                </div>
+                <div class="menu-student">
+                    <span class="name">Ayane</span>
+                    <img class="icon" src="./assets/student_icon/Ayane_Icon.png">
+                </div>
+            </div>
         </div>
         
 

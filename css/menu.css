@@ -5,12 +5,13 @@
 
 .menu {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
 }
 
-.menu-text {
+#menu-text {
     font-size: 5rem;
     font-family: teko-l;
     color: white;
@@ -18,25 +19,92 @@
     text-transform: uppercase;
     padding-bottom: 1.5rem;
     opacity: 1;
-    transition: opacity 0.5s ease;
+    transition: 0.5s ease;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    background: none;
+    border: none;
+}
 
+#menu-text:hover {
+	letter-spacing: .6rem;
+	text-shadow: 2px 6px 6px rgba(0, 0, 0, 0.5);
 }
 
 #menu-next,
 #menu-back {
+	position: fixed;
     height: 100%;
     font-size: 3rem;
     color: white;
     letter-spacing: .5rem;
-    padding: 2.5rem 1.5rem 5rem 2.5rem;
     cursor: pointer;
     transition: background 0.1s ease;
     background: none;
     border: none;
 }
 
+#menu-next {
+	right: 0;
+	padding: 2.5rem 1.5rem 5rem 2.5rem;
+}
+
+#menu-back {
+	left: 0;
+	padding: 2.5rem 2.5rem 5rem 1.5rem;
+}
+
 #menu-next:hover,
 #menu-back:hover {
     background: #ffffff30;
+}
+
+#menu-text {
+	display: none;
+}
+
+.menu-row {
+	display: flex;
+	flex-direction: row;
+	margin-top: auto;
+	padding: 3rem;
+}
+
+.menu-student {
+	position: relative;
+	border: 0.15rem solid #ffffff50;
+	border-radius: .5rem;
+	height: 6rem;
+	margin: 0.25rem;
+	background: #ffffff50;
+}
+
+.menu-student > .name {
+	padding: .3rem 0;
+	position: absolute;
+    font-size: 1.5rem;
+    font-family: teko-r;
+    color: white;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    line-height: 0.75rem;
+    text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.menu-student > .icon {
+	height: 100%;
+}
+
+.menu-portrait {
+	display: flex;
+	position: absolute;
+	height: 100vh;
+}
+
+.menu-portrait > img {
+	margin: auto;
+	height: 90%;
+	padding: 1rem;
+	box-sizing: border-box;
 }
