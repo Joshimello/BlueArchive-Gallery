@@ -184,3 +184,33 @@ const navEnter = () => {
 
 
 }
+
+// portrait switch to char
+const charSwitch = char => {
+    setTimeout(() => {
+        $('.menu-portrait').empty()
+        $('.menu-portrait').append(`<img class="menu-portrait-img" src="./assets/student_portrait/${char}_Portrait.png">`)
+        console.log('hi')
+    }, 500)
+
+    PowerGlitch.glitch('.menu-portrait-img', {
+        "playMode": "always",
+        "hideOverflow": false,
+        "glitchTimeSpan": {
+            "start": 0.0,
+            "end": 0.2
+        },
+        "shake": {
+            "velocity": 1,
+            "amplitudeX": 0.4,
+            "amplitudeY": 0.4,
+        },
+        "slice": {
+            "count": 10,
+            "velocity": 10,
+            "minHeight": 0.02,
+            "maxHeight": 0.40,
+            "hueRotate": true,
+        }
+    })
+}

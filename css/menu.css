@@ -1,6 +1,6 @@
 #gradient {
-	height: 100vh;
-	width: 100vw;
+    height: 100vh;
+    width: 100vw;
 }
 
 .menu {
@@ -27,13 +27,13 @@
 }
 
 #menu-text:hover {
-	letter-spacing: .6rem;
-	text-shadow: 2px 6px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: .6rem;
+    text-shadow: 2px 6px 6px rgba(0, 0, 0, 0.5);
 }
 
 #menu-next,
 #menu-back {
-	position: fixed;
+    position: fixed;
     height: 100%;
     font-size: 3rem;
     color: white;
@@ -45,13 +45,13 @@
 }
 
 #menu-next {
-	right: 0;
-	padding: 2.5rem 1.5rem 5rem 2.5rem;
+    right: 0;
+    padding: 2.5rem 1.5rem 5rem 2.5rem;
 }
 
 #menu-back {
-	left: 0;
-	padding: 2.5rem 2.5rem 5rem 1.5rem;
+    left: 0;
+    padding: 2.5rem 2.5rem 5rem 1.5rem;
 }
 
 #menu-next:hover,
@@ -60,28 +60,34 @@
 }
 
 #menu-text {
-	display: none;
+    display: none;
 }
 
 .menu-row {
-	display: flex;
-	flex-direction: row;
-	margin-top: auto;
-	padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+    padding: 3rem;
 }
 
 .menu-student {
-	position: relative;
-	border: 0.15rem solid #ffffff50;
-	border-radius: .5rem;
-	height: 6rem;
-	margin: 0.25rem;
-	background: #ffffff50;
+    position: relative;
+    border: 0.15rem solid #ffffff50;
+    border-radius: .5rem;
+    height: 6rem;
+    margin: 0.25rem;
+    background: #ffffff50;
+    transition: all .2s ease;
 }
 
-.menu-student > .name {
-	padding: .3rem 0;
-	position: absolute;
+.menu-student:hover {
+	border: 0.15rem solid #ffffff;
+	background: #ffffff99;
+}
+
+.menu-student>.name {
+    padding: .3rem 0;
+    position: absolute;
     font-size: 1.5rem;
     font-family: teko-r;
     color: white;
@@ -90,21 +96,26 @@
     writing-mode: vertical-rl;
     line-height: 0.75rem;
     text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
-.menu-student > .icon {
-	height: 100%;
+.menu-student>.icon {
+	position: relative;
+    height: 100%;
+    z-index: 2;
 }
 
 .menu-portrait {
-	display: flex;
-	position: absolute;
-	height: 100vh;
+    position: absolute;
+    height: 100vh;
 }
 
-.menu-portrait > img {
-	margin: auto;
-	height: 90%;
-	padding: 1rem;
-	box-sizing: border-box;
+.menu-portrait>img {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+    height: 90%;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
 }

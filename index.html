@@ -15,6 +15,7 @@
     <script src="js/OrbitControls.js"></script>
     <script src="js/gsap.min.js"></script>
     <script src="js/granim.min.js"></script>
+    <script src="js/powerglitch.min.js"></script>
 </head>
 
 <body>
@@ -27,27 +28,27 @@
             <button id="menu-text" onclick="navEnter()"></button>
 
             <div class="menu-portrait">
-                <img src="./assets/student_portrait/Nonomi_Portrait.png">
+                <img class="menu-portrait-img" src="./assets/student_portrait/Nonomi_Portrait.png">
             </div>
 
             <div class="menu-row">
-                <div class="menu-student">
+                <div class="menu-student" onclick="charSwitch('Shiroko')">
                     <span class="name">Shiroko</span>
                     <img class="icon" src="./assets/student_icon/Shiroko_Icon.png">
                 </div>            
-                <div class="menu-student">
+                <div class="menu-student" onclick="charSwitch('Serika')">
                     <span class="name">Serika</span>
                     <img class="icon" src="./assets/student_icon/Serika_Icon.png">
                 </div>
-                <div class="menu-student">
+                <div class="menu-student" onclick="charSwitch('Hoshino')">
                     <span class="name">Hoshino</span>
                     <img class="icon" src="./assets/student_icon/Hoshino_Icon.png">
                 </div>
-                <div class="menu-student">
+                <div class="menu-student" onclick="charSwitch('Nonomi')">
                     <span class="name">Nonomi</span>
                     <img class="icon" src="./assets/student_icon/Nonomi_Icon.png">
                 </div>
-                <div class="menu-student">
+                <div class="menu-student" onclick="charSwitch('Ayane')">
                     <span class="name">Ayane</span>
                     <img class="icon" src="./assets/student_icon/Ayane_Icon.png">
                 </div>
