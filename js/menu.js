@@ -191,7 +191,7 @@ const charSwitch = char => {
         $('.menu-portrait').empty()
         $('.menu-portrait').append(`<img class="menu-portrait-img" src="./assets/student_portrait/${char}_Portrait.png">`)
         console.log('hi')
-    }, 500)
+    }, 200)
 
     PowerGlitch.glitch('.menu-portrait-img', {
         "playMode": "always",
@@ -201,9 +201,7 @@ const charSwitch = char => {
             "end": 0.2
         },
         "shake": {
-            "velocity": 1,
-            "amplitudeX": 0.4,
-            "amplitudeY": 0.4,
+            "velocity": 0        
         },
         "slice": {
             "count": 10,
