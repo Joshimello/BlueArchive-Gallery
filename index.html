@@ -28,30 +28,30 @@
             <button id="menu-text" onclick="navEnter()"></button>
 
             <div class="menu-portrait">
-                <img class="menu-portrait-img" src="./assets/student_portrait/Nonomi_Portrait.png">
+                <img class="menu-portrait-img" data-src="./assets/student_portrait/Hoshino_Portrait.png">
             </div>
 
             <div class="menu-row">
-                <div class="menu-student" onclick="charSwitch('Shiroko')">
+                <div class="menu-student" onclick="charSwitch('Shiroko', -2)">
                     <span class="name">Shiroko</span>
-                    <img class="icon" src="./assets/student_icon/Shiroko_Icon.png">
+                    <img class="icon" data-src="./assets/student_icon/Shiroko_Icon.png">
                 </div>            
-                <div class="menu-student" onclick="charSwitch('Serika')">
+                <div class="menu-student" onclick="charSwitch('Serika', -1)">
                     <span class="name">Serika</span>
-                    <img class="icon" src="./assets/student_icon/Serika_Icon.png">
+                    <img class="icon" data-src="./assets/student_icon/Serika_Icon.png">
                 </div>
-                <div class="menu-student" onclick="charSwitch('Hoshino')">
+                <div class="menu-student" onclick="charSwitch('Hoshino', 0)">
                     <span class="name">Hoshino</span>
-                    <img class="icon" src="./assets/student_icon/Hoshino_Icon.png">
+                    <img class="icon" data-src="./assets/student_icon/Hoshino_Icon.png">
                 </div>
-                <div class="menu-student" onclick="charSwitch('Nonomi')">
+                <div class="menu-student" onclick="charSwitch('Nonomi', 1)">
                     <span class="name">Nonomi</span>
-                    <img class="icon" src="./assets/student_icon/Nonomi_Icon.png">
+                    <img class="icon" data-src="./assets/student_icon/Nonomi_Icon.png">
                 </div>
-                <div class="menu-student" onclick="charSwitch('Ayane')">
+                <div class="menu-student" onclick="charSwitch('Ayane', 2)">
                     <span class="name">Ayane</span>
-                    <img class="icon" src="./assets/student_icon/Ayane_Icon.png">
-                </div>
+                    <img class="icon" data-src="./assets/student_icon/Ayane_Icon.png">
+                </div>          
             </div>
         </div>
         
@@ -65,6 +65,7 @@
 
 
     </main>
+    <script src="js/preload.js"></script>
     <script src="js/threesetup.js"></script>
     <script src="js/main.js"></script>
     <script src="js/menu.js"></script>

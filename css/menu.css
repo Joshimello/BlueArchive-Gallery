@@ -64,24 +64,27 @@
 }
 
 .menu-row {
+	bottom: 0;
+	position: absolute;
     display: flex;
     flex-direction: row;
-    margin-top: auto;
-    padding: 3rem;
+    box-sizing: border-box;
+    margin-bottom: 3rem;
 }
 
 .menu-student {
     position: relative;
-    border: 0.15rem solid #ffffff50;
+    box-sizing: border-box;
+    border: 0.25rem solid #ffffff00;
     border-radius: .5rem;
     height: 6rem;
-    margin: 0.25rem;
+    width: 7.5rem;
     background: #ffffff50;
     transition: all .2s ease;
 }
 
 .menu-student:hover {
-	border: 0.15rem solid #ffffff;
+	border: 0.25rem solid #ffffff;
 	background: #ffffff99;
 }
 

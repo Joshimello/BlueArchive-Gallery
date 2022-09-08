@@ -186,12 +186,16 @@ const navEnter = () => {
 }
 
 // portrait switch to char
-const charSwitch = char => {
+var currentIndex = 0
+const charSwitch = (char, index) => {
+    TweenMax.to($('.menu-row'), .5, { css: {left: `+=${((currentIndex - index) * 7.5)}rem`}})
+
     setTimeout(() => {
         $('.menu-portrait').empty()
         $('.menu-portrait').append(`<img class="menu-portrait-img" src="./assets/student_portrait/${char}_Portrait.png">`)
-        console.log('hi')
     }, 200)
+
+    currentIndex = index
 
     PowerGlitch.glitch('.menu-portrait-img', {
         "playMode": "always",
