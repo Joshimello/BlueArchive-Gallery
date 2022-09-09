@@ -27,31 +27,51 @@
         <div class="menu">
             <button id="menu-text" onclick="navEnter()"></button>
 
+            <div class="menu-desc">
+                <span class="role">Striker Tank</span>
+                <span class="name">Hoshino</span>
+                <span class="namae">小鳥遊・ホシノ</span>
+                <div class="btns">
+                    <button>
+                        <span>About</span>
+                    </button>
+                    <button>
+                        <span>SKill</span>
+                    </button>
+                    <button>
+                        <span>Stats</span>
+                    </button>
+                </div>
+                <div class="about">
+                    Star : ⭐⭐⭐
+                </div>
+            </div>
+
             <div class="menu-portrait">
                 <img class="menu-portrait-img" data-src="./assets/student_portrait/Hoshino_Portrait.png">
             </div>
 
             <div class="menu-row">
-                <div class="menu-student" onclick="charSwitch('Shiroko', -2)">
+                <button class="menu-student" onclick="charSwitch(this, 'Shiroko', -2)">
                     <span class="name">Shiroko</span>
                     <img class="icon" data-src="./assets/student_icon/Shiroko_Icon.png">
-                </div>            
-                <div class="menu-student" onclick="charSwitch('Serika', -1)">
+                </button>            
+                <button class="menu-student" onclick="charSwitch(this, 'Serika', -1)">
                     <span class="name">Serika</span>
                     <img class="icon" data-src="./assets/student_icon/Serika_Icon.png">
-                </div>
-                <div class="menu-student" onclick="charSwitch('Hoshino', 0)">
+                </button>
+                <button class="menu-student" onclick="charSwitch(this, 'Hoshino', 0)">
                     <span class="name">Hoshino</span>
                     <img class="icon" data-src="./assets/student_icon/Hoshino_Icon.png">
-                </div>
-                <div class="menu-student" onclick="charSwitch('Nonomi', 1)">
+                </button>
+                <button class="menu-student" onclick="charSwitch(this, 'Nonomi', 1)">   
                     <span class="name">Nonomi</span>
                     <img class="icon" data-src="./assets/student_icon/Nonomi_Icon.png">
-                </div>
-                <div class="menu-student" onclick="charSwitch('Ayane', 2)">
+                </button>
+                <button class="menu-student" onclick="charSwitch(this, 'Ayane', 2)">
                     <span class="name">Ayane</span>
                     <img class="icon" data-src="./assets/student_icon/Ayane_Icon.png">
-                </div>          
+                </button>          
             </div>
         </div>
         

@@ -187,12 +187,15 @@ const navEnter = () => {
 
 // portrait switch to char
 var currentIndex = 0
-const charSwitch = (char, index) => {
-    TweenMax.to($('.menu-row'), .5, { css: {left: `+=${((currentIndex - index) * 7.5)}rem`}})
+const charSwitch = (el, char, index) => {
+    $(el).prop('disabled', true)
+
+    TweenMax.to($('.menu-row'), .2, { css: {left: `+=${((currentIndex - index) * 7.5)}rem`}})
 
     setTimeout(() => {
         $('.menu-portrait').empty()
         $('.menu-portrait').append(`<img class="menu-portrait-img" src="./assets/student_portrait/${char}_Portrait.png">`)
+        $(el).removeAttr('disabled')
     }, 200)
 
     currentIndex = index

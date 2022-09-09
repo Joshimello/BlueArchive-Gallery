@@ -64,8 +64,8 @@
 }
 
 .menu-row {
-	bottom: 0;
-	position: absolute;
+    bottom: 0;
+    position: absolute;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
@@ -84,8 +84,8 @@
 }
 
 .menu-student:hover {
-	border: 0.25rem solid #ffffff;
-	background: #ffffff99;
+    border: 0.25rem solid #ffffff;
+    background: #ffffff99;
 }
 
 .menu-student>.name {
@@ -103,16 +103,16 @@
 }
 
 .menu-student>.icon {
-	position: relative;
+    position: relative;
     height: 100%;
     z-index: 2;
 }
 
 .menu-portrait {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     position: absolute;
     height: 100vh;
 }
@@ -121,4 +121,85 @@
     height: 90%;
     box-sizing: border-box;
     transition: all 0.5s ease;
+}
+
+.menu-desc {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 4rem 12rem;
+}
+
+.menu-desc>.role {
+    position: relative;
+    top: 0.5rem;
+    padding: 0rem 0.22rem;
+    font-size: 1rem;
+    font-family: teko-l;
+    color: #FFFFFF;
+    letter-spacing: 0.35rem;
+    text-transform: uppercase;
+}
+
+.menu-desc>.name {
+    display: block;
+    font-size: 5rem;
+    font-family: teko-r;
+    color: #FFFFFF99;
+    letter-spacing: -0.2rem;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #FFFFFF50,
+        2px 1px 1px #FFFFFF40,
+        3px 1px 1px #FFFFFF30;
+}
+
+.menu-desc>.namae {
+    padding: 0rem 0.2rem;
+    position: relative;
+    top: -1.2rem;
+    font-size: 1.35rem;
+    font-family: mplus-r;
+    color: #FFFFFF99;
+    letter-spacing: 0.1rem;
+    text-shadow: 1px 1px 1px #FFFFFF99;
+}
+
+.btns>button {
+    border: none;
+    background: none;
+}
+
+.btns span {
+    font-size: 1rem;
+    font-family: teko-l;
+    color: #FFFFFF;
+    letter-spacing: 0.35rem;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-bottom: 0.1rem;
+    background-image: linear-gradient(#FFFFFF99 0 0);
+    background-position: 0 100%;
+    background-size: 0% 0.15rem;
+    background-repeat: no-repeat;
+    transition: 
+    	background-size 0.3s, 
+    	background-position 0s 0.3s,
+    	transform 0.1s;
+}
+
+.btns span:hover {
+    background-position: 100% 100%;
+    background-size: 100% 0.15rem;
+}
+
+.btns span:active {
+	transform: scale(0.9);
+}
+
+.menu-desc>.about {
+	padding: 0rem 0.2rem;
+    font-size: 1rem;
+    font-family: teko-r;
+    color: #FFFFFF;
+    text-transform: uppercase;
 }
