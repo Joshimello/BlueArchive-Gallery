@@ -187,7 +187,31 @@ const navEnter = () => {
 
 // portrait switch to char
 var currentIndex = 0
+var isAnimate = false
+var isSkin = false
 const charSwitch = (el, char, index) => {
+    // reset icon
+    $('.menu-student>img').each((index, el) => {
+        $(el).attr('src', $(el).data('src'))
+    })
+
+    // change skin instead if click again
+    if (currentIndex == index && isAnimate == true) {
+        if (isSkin == false) {
+            $(el).children('img').attr('src', `./assets/student_icon/${char}_Skin_Icon.png`)
+            $('.menu-portrait-img').attr('src', `./assets/student_portrait/${char}_Skin_Portrait.png`)
+            isSkin = true
+            return
+        } else {
+            $(el).children('img').attr('src', `./assets/student_icon/${char}_Icon.png`)
+            $('.menu-portrait-img').attr('src', `./assets/student_portrait/${char}_Portrait.png`)
+            isSkin = false
+            return
+        }
+    }
+
+    isAnimate = false
+
     $(el).prop('disabled', true)
 
     TweenMax.to($('.menu-row'), .2, { css: {left: `+=${((currentIndex - index) * 7.5)}rem`}})
@@ -196,6 +220,7 @@ const charSwitch = (el, char, index) => {
         $('.menu-portrait').empty()
         $('.menu-portrait').append(`<img class="menu-portrait-img" src="./assets/student_portrait/${char}_Portrait.png">`)
         $(el).removeAttr('disabled')
+        isAnimate = true
     }, 200)
 
     currentIndex = index
@@ -218,4 +243,12 @@ const charSwitch = (el, char, index) => {
             "hueRotate": true,
         }
     })
+}
+
+// on info switch tab
+var currentTab = 'about'
+const switchInfo = tab => {
+    $(`#${currentTab}`).css('display', 'none')
+    $(`#${tab}`).css('display', 'block')
+    currentTab = tab
 }

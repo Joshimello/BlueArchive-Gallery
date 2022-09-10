@@ -73,6 +73,7 @@
 }
 
 .menu-student {
+	padding: 0;
     position: relative;
     box-sizing: border-box;
     border: 0.25rem solid #ffffff00;
@@ -89,15 +90,15 @@
 }
 
 .menu-student>.name {
-    padding: .3rem 0;
+    padding: .2rem 0;
     position: absolute;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-family: teko-r;
     color: white;
     letter-spacing: .1rem;
     text-transform: uppercase;
     writing-mode: vertical-rl;
-    line-height: 0.75rem;
+    line-height: 0.35rem;
     text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
@@ -106,6 +107,14 @@
     position: relative;
     height: 100%;
     z-index: 2;
+}
+
+.menu-student>.skin {
+	position: absolute;
+	font-size: 1.5rem;
+	color: white;
+	border: none;
+	background: none;
 }
 
 .menu-portrait {
@@ -127,7 +136,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    margin: 4rem 12rem;
+    margin: 4rem 10rem;
 }
 
 .menu-desc>.role {
@@ -196,10 +205,62 @@
 	transform: scale(0.9);
 }
 
-.menu-desc>.about {
+.menu-desc>.info {
 	padding: 0rem 0.2rem;
-    font-size: 1rem;
-    font-family: teko-r;
+}
+
+.info-row {
+	line-height: 1.5rem;
+	display: flex;
+	align-items: center;
+	border-bottom: 0.1rem solid #FFFFFF99;
+}
+
+.info-row>span {
+	font-size: 1rem;
+	font-family: teko-r;
     color: #FFFFFF;
     text-transform: uppercase;
+	margin-right: auto;
+}
+
+.info-row img {
+	height: 1em;
+}
+
+.info-text {
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	font-size: 1rem;
+	font-family: teko-r;
+}
+
+.info-text>img {
+	padding: 0rem 0.3rem;
+}
+
+.info-around {
+	line-height: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 0.1rem solid #FFFFFF99;
+}
+
+.info-around>span {
+	font-size: 1rem;
+	font-family: teko-r;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+#skills img {
+	height: 2em;
+	padding: 0.2rem 0rem 0.2rem 0.2rem;
+}
+
+#skills, #profile {
+	display: none;
 }

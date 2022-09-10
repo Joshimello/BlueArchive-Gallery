@@ -32,18 +32,119 @@
                 <span class="name">Hoshino</span>
                 <span class="namae">小鳥遊・ホシノ</span>
                 <div class="btns">
-                    <button>
+                    <button onclick="switchInfo('about')">
                         <span>About</span>
                     </button>
-                    <button>
-                        <span>SKill</span>
+                    <button onclick="switchInfo('skills')">
+                        <span>Skills</span>
                     </button>
-                    <button>
-                        <span>Stats</span>
+                    <button onclick="switchInfo('profile')">
+                        <span>Profile</span>
                     </button>
                 </div>
-                <div class="about">
-                    Star : ⭐⭐⭐
+                <div class="info" id="about">
+                    <div class="info-row">
+                        <span>Rank</span>
+                        <img src="./assets/info_icon/Star_Icon.png">
+                        <img src="./assets/info_icon/Star_Icon.png">
+                        <img src="./assets/info_icon/Star_Icon.png">
+                    </div>
+                    <div class="info-row">
+                        <span>Terrain</span>
+                        <img src="./assets/info_icon/City_Icon_Red.png">
+                        <img src="./assets/info_icon/Desert_Icon_Green.png">
+                        <img src="./assets/info_icon/Indoor_Icon_Yellow.png">    
+                    </div>
+                    <div class="info-row">
+                        <span>Damage</span>
+                        <div class="info-text">
+                            <span>Penetration</span>
+                            <img src="./assets/info_icon/Damage_Icon_Yellow.png">
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <span>Defense</span>
+                        <div class="info-text">
+                            <span>Heavy</span>
+                            <img src="./assets/info_icon/Armor_Icon_Yellow.png">
+                        </div>
+                    </div>
+                    <div class="info-around">
+                        <span>HP 213</span>
+                        <span>ATK 3275</span>
+                        <span>DEF 175</span>
+                        <span>HEAL 1687</span>
+                    </div>
+                </div>
+
+                <div class="info" id="skills">
+                    <div class="info-row">
+                        <span>EX</span>
+                        <div class="info-text">
+                            <span>Tactical Suppression</span>
+                            <img src="./assets/skill_icon/FAN.png">
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <span>Normal</span>
+                        <div class="info-text">
+                            <span>Emergency First Aid</span>
+                            <img src="./assets/skill_icon/DOT-HEAL.png">
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <span>Passive</span>
+                        <div class="info-text">
+                            <span>Task Force President</span>
+                            <img src="./assets/skill_icon/STAT-BUFF.png">
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <span>Sub</span>
+                        <div class="info-text">
+                            <span>Expert Suppression</span>
+                            <img src="./assets/skill_icon/SHIELD.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info" id="profile">
+                    <div class="info-row">
+                        <span>Age</span>
+                        <div class="info-text">
+                            <span>17</span>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <span>Birthday</span>
+                        <div class="info-text">
+                            <span>January 2nd</span>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <span>Height</span>
+                        <div class="info-text">
+                            <span>145</span>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <span>School Year</span>
+                        <div class="info-text">
+                            <span>Third</span>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <span>Club</span>
+                        <div class="info-text">
+                            <span>Countermeasures Committee</span>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <span>Hobby</span>
+                        <div class="info-text">
+                            <span>Afternoon Nap & Rumbling</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
